@@ -22,17 +22,29 @@ const skDaugintasIsIndex = numbers.map((sk, i) => sk * i);
 console.log('skDaugintasIsIndex ===', skDaugintasIsIndex);
 
 //  6. Atrinkti tiktai teigimų elementų masyvą
-
+const teigiami = numbers.filter((sk) => sk > 0);
+console.log('teigiami ===', teigiami);
 //  7. Atrinkti vertes didesnes uz 3
+const daugiauNei3 = numbers.filter((sk) => sk > 3);
+console.log('daugiauNei3 ===', daugiauNei3);
 //  7.1 Parasyti funkcija kuri ima 2 argumentus, masyva ir skaiciu uz kuri didesnes vertes grazina ir atspausdina.
-// printAndReturn(numbers, 5)
-// printAndReturn(numbers, -1)
+
+function printAndReturn(arr, daugiauUz) {
+  const result = arr.filter((el) => el > daugiauUz);
+  console.log('printAndReturn === ', daugiauUz, result);
+  return result;
+}
 
 // 12. Suapvalinti visas masyvo reikšmes iki sveikų skaičių
-
+const apvalus = numbers.map((sk) => Math.round(sk));
+console.log('apvalus ===', apvalus);
 // 13. Atrinkti kas antrą elementą į naują masyvą
+const kasAntras = numbers.filter((sk, i) => i % 2 === 0);
+console.log('kasAntras ===', kasAntras);
 
 // 15. Atspausdinti kiekvieną masyvo reikšmę atskiroje eilutėje: [0] => 64.
+numbers.forEach((sk, i) => console.log(`[${i}] => ${sk}`));
+
 // 15.1 Grazinti nauja masyva kuriame yra objektai
 // [
 //   {index: 0, reiksme: 64}
@@ -43,3 +55,8 @@ console.log('skDaugintasIsIndex ===', skDaugintasIsIndex);
 // 16. Suskaičiuoti visų elementų sumą
 
 // 18. Rasti didžiausią skaičių masyve
+
+const daugiau5 = printAndReturn(numbers, 5);
+const daugiaum1 = printAndReturn(numbers, -1);
+
+console.log(daugiau5.concat(daugiaum1));

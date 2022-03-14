@@ -7,4 +7,12 @@
 */
 
 // gen2. parasyti funkcija kuri sugeneruoja inputa su label kai
-// argumentais mes jai paduotam inputo tipa, id, ir destination (tevini el i kuri ikelti ta sukurta el)
+// argumentais mes jai paduotam inputo tipa, label, id, ir destination (tevini el i kuri ikelti ta sukurta el)
+// genInput('password', 'Password', 'pass1', 'formEl')
+// sugeneruotu
+/*    
+<div class="input-group">
+  <label for="pass1">Password</label>
+  <input type="password" name="pass1" id="pass1" />
+</div>
+*/
