@@ -1,5 +1,5 @@
 console.log('one');
-
+//               0  1  2   3
 const numbers = [1, 2, 3, 5.3, 8, -8, -5.5, -6, -16, -5, -9, 4.2, 5, 12, -6, 45];
 console.log('numbers ===', numbers);
 //  3. Sukurkite ir atvaizduokite masyvą su dvigubomis reikšmėmis;
@@ -9,6 +9,13 @@ const doubleNumbers = numbers.map((sk) => {
 });
 console.log('doubleNumbers ===', doubleNumbers);
 //  4. Sukurkite ir atvaizduokite masyvą su kvadratu pekltomis reikšmėmis;
+// const kvadratuReiksmes = numbers.map((sk) => sk * sk);
+const kvadratuReiksmes = numbers.map(makeKvadratu);
+
+function makeKvadratu(num) {
+  return num * num;
+}
+console.log('kvadratuReiksmes ===', kvadratuReiksmes);
 
 //  5. Sukurkite ir atvaizduokite masyvą su reikšmėmis padaugintomis iš jų vietos masyve indekso
 
@@ -16,6 +23,8 @@ console.log('doubleNumbers ===', doubleNumbers);
 
 //  7. Atrinkti vertes didesnes uz 3
 //  7.1 Parasyti funkcija kuri ima 2 argumentus, masyva ir skaiciu uz kuri didesnes vertes grazina ir atspausdina.
+// printAndReturn(numbers, 5)
+// printAndReturn(numbers, -1)
 
 // 12. Suapvalinti visas masyvo reikšmes iki sveikų skaičių
 

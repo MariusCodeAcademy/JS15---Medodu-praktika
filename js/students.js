@@ -51,3 +51,5 @@ const students = [
 ];
 
 // st1. sugeneruoti studentu nerikiuota sarasa htmle kuriame butu studentu vardai
+
+// st2. Parasyti funkcija, kuriai paduodam miesta kaip argumenta ir ji atrenka studentus is to miesto
