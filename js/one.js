@@ -60,3 +60,16 @@ const daugiau5 = printAndReturn(numbers, 5);
 const daugiaum1 = printAndReturn(numbers, -1);
 
 console.log(daugiau5.concat(daugiaum1));
+
+// 20. is masyvo
+const arr = [
+  { title: 'Mike', age: 30 },
+  { title: 'Bob', age: 33 },
+  { title: 'Jill', age: 20 },
+];
+// grazinti objekta
+const result = {
+  mike: 30,
+  bob: 33,
+  jill: 20,
+};
