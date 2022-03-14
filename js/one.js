@@ -18,6 +18,8 @@ function makeKvadratu(num) {
 console.log('kvadratuReiksmes ===', kvadratuReiksmes);
 
 //  5. Sukurkite ir atvaizduokite masyvą su reikšmėmis padaugintomis iš jų vietos masyve indekso
+const skDaugintasIsIndex = numbers.map((sk, i) => sk * i);
+console.log('skDaugintasIsIndex ===', skDaugintasIsIndex);
 
 //  6. Atrinkti tiktai teigimų elementų masyvą
 
