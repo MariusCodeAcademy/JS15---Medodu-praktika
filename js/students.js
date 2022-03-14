@@ -57,3 +57,6 @@ const students = [
 // st3. Parasyti funkcija, kuriai paduodam amziu kaip argumenta ir ji atrenka studentus kuriu amzius didesnis uz argumenta.
 
 // st4. prie st1 sugeneruoto saraso pridedam mygtuka su textu 'delete'. mygtuka paspaudus istiname ta li el kuriame yra paspaustas mygtukas
+
+// st5. is studentu masyvo infomracijos sugeneruoti korteles htmle.
+// korteles turi tureti apvada ir visa su studentu susijusia info. korteles turi tilpti 3 per spulapio ploti.
