@@ -60,7 +60,7 @@ function genList() {
 
   document.body.append(ulEl);
 }
-// genList();
+genList();
 
 // st2. Parasyti funkcija, kuriai paduodam miesta kaip argumenta ir ji atrenka studentus is to miesto
 const kaunieciai = studentsFrom('Kaunas');
@@ -123,9 +123,14 @@ const allBtn = document.getElementById('all');
 const kaunasBtn = document.getElementById('kaunas');
 const vilniusBtn = document.getElementById('vilnius');
 
+// allBtn.addEventListener('click', clickLog);
 allBtn.addEventListener('click', () => generateCards(students));
 kaunasBtn.addEventListener('click', () => generateCards(studentsFrom('Kaunas')));
 vilniusBtn.addEventListener('click', () => generateCards(students.filter((studObj) => studObj.town === 'Vilnius')));
+
+function clickLog() {
+  console.log('clicked');
+}
 
 // st6 paspaudus atitinkamus mygtukus mes htmle atvaizduojam visus, kauniecius arba vilniecius korteliu pavidalu (st5)
 /*  
@@ -133,3 +138,5 @@ vilniusBtn.addEventListener('click', () => generateCards(students.filter((studOb
 <button id="kaunas">Kaunieciai</button>
 <button id="vilnius">Vilnieciai</button>
 */
+function makeEl(tag, className, text, dest) {}
+makeEl('h2', 'title', 'yes', divEl);
