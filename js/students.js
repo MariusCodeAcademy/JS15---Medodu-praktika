@@ -60,11 +60,11 @@ function genList() {
 
   document.body.append(ulEl);
 }
-genList();
+// genList();
 
 // st2. Parasyti funkcija, kuriai paduodam miesta kaip argumenta ir ji atrenka studentus is to miesto
 const kaunieciai = studentsFrom('Kaunas');
-console.log('kaunieciai ===', kaunieciai);
+// console.log('kaunieciai ===', kaunieciai);
 function studentsFrom(miestas) {
   return students.filter((studObj) => studObj.town === miestas);
 }
@@ -91,6 +91,41 @@ document.body.addEventListener('click', (e) => {
   <p>He is 25 years old and has a car</p>
 </div> */
 }
+function makeStudCard(stObj) {
+  const gender = stObj.gender === 'male' ? 'man' : 'woman';
+  const who = stObj.gender === 'male' ? 'He' : 'She';
+  const car = stObj.hasCar ? 'and has a car' : '';
+
+  return `
+  <div class="stud-card">
+    <h3>${stObj.name}</h3>
+    <p>A ${gender} from ${stObj.town}</p>
+    <p>${who} is ${stObj.age} years old ${car}</p>
+  </div>
+  `;
+  // console.log('studString ===', studString);
+}
+const divEl = document.createElement('div');
+divEl.className = 'grid';
+document.body.append(divEl);
+
+function generateCards(arr) {
+  // clear el
+  divEl.innerHTML = '';
+  // gen
+  arr.forEach((el) => {
+    divEl.innerHTML += makeStudCard(el);
+  });
+}
+// generateCards(students);
+
+const allBtn = document.getElementById('all');
+const kaunasBtn = document.getElementById('kaunas');
+const vilniusBtn = document.getElementById('vilnius');
+
+allBtn.addEventListener('click', () => generateCards(students));
+kaunasBtn.addEventListener('click', () => generateCards(studentsFrom('Kaunas')));
+vilniusBtn.addEventListener('click', () => generateCards(students.filter((studObj) => studObj.town === 'Vilnius')));
 
 // st6 paspaudus atitinkamus mygtukus mes htmle atvaizduojam visus, kauniecius arba vilniecius korteliu pavidalu (st5)
 /*  
